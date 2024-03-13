@@ -1,0 +1,25 @@
+default: &default
+  adapter: sqlserver
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  host: afgdb2016
+  username: hmehraban
+  password: 1qazZAQ!
+  database: DV2764_TESTING
+
+test:
+  <<: *default
+  host: afgdb2016
+  username: hmehraban
+  password: 1qazZAQ!
+  database: DV2764_TESTING
+
+production:
+  <<: *default
+  host: afgdb2016
+  username: hmehraban
+  password: 1qazZAQ!
+  database: DV2764_TESTING
